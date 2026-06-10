@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, field_validator
 from datetime import datetime
 from typing import Optional, List
 
@@ -16,6 +16,13 @@ class TicketCreate(BaseModel):
     customer_email: EmailStr
     subject: str
     description: str
+
+    @field_validator("customer_name", "subject", "description")
+    @classmethod
+    def not_empty(cls, v):
+        if not v or not v.strip():
+            raise ValueError("Field cannot be empty")
+        return v
 
 class TicketUpdate(BaseModel):
     status: str
