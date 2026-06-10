@@ -102,9 +102,10 @@ def get_dashboard_stats(db: Session = Depends(database.get_db)):
 
 
 # --- FRONTEND ROUTING PROVIDER ---
-frontend_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend"))
-if os.path.exists(frontend_path):
-    app.mount("/static", StaticFiles(directory=frontend_path), name="static")
+frontend_path = os.path.join(
+    os.path.dirname(__file__),
+    "frontend"
+)
 
 @app.get("/")
 def serve_homepage():
