@@ -323,7 +323,7 @@
         function updateAnalytics(tickets) {
             document.getElementById('stat-total').innerText = tickets.length;
             document.getElementById('stat-open').innerText = tickets.filter(t => t.status === 'Open').length;
-            document.getElementById('stat-active').innerText = tickets.filter(t => t.status === 'Open' || t.status === 'In Progress').length;
+            document.getElementById('stat-active').innerText = tickets.filter(t => t.status === 'In Progress').length;
             document.getElementById('stat-closed').innerText = tickets.filter(t => t.status === 'Closed').length;
         }
 
