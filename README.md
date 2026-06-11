@@ -62,7 +62,7 @@ This is not a toy project — it runs on actual servers with a real database and
 | **Backend** | Python + FastAPI | Fast, modern, auto docs, type validation |
 | **Database** | SQLite + SQLAlchemy ORM | Simple, serverless, no setup required |
 | **Validation** | Pydantic v2 | Strict input/output schema validation |
-| **Frontend** | HTML5 + Vanilla JavaScript | No build step, lightweight, fast |
+| **Frontend** | HTML5 |
 | **Styling** | Tailwind CSS (CDN) | Utility-first, responsive out of the box |
 | **Deployment** | Railway.app | Simple GitHub-connected deployment |
 
